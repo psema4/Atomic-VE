@@ -1,0 +1,210 @@
+/* Menu bar */
+#dlg-menu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #000;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+select#fileMenu,
+select#viewMenu,
+select#toolsMenu,
+select#helpMenu {
+    position: absolute;
+    top: 0px;
+    left: 1ex;
+    width: 100px;
+    border: 0px solid #000;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -webkit-appearance: none;
+}
+
+select#viewMenu { left: 8ex; }
+select#toolsMenu { left: 15ex; }
+select#helpMenu { left: 22ex; }
+
+/* Status bar */
+#dlg-status {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 30px;
+    line-height: 30px;
+    border-top: 1px solid #000;
+    background-color: #ddd;
+    color: #777;
+    padding-left: 1ex;
+    z-index: 1;
+}
+
+/* Tool Palette */
+#dlg-palette {
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    right: 200px;
+    width: 250px;
+    height: 350px;
+    border: 2px outset #ddd;
+    background-color: #ddd;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    border-radius: 4px;
+    z-index: 100000;
+}
+
+.palette {
+    position: absolute;
+    top: 1.5em;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: auto;
+}
+
+.palette button {
+    display: inline-block;
+    margin-left: 2px;
+    height: 24px;
+    width: 90%;
+    margin-right: 2px;
+    border: 1px solid #000;
+    border-top: 0px solid #000;
+    background-color: #eee;
+}
+
+.palette button.complex {
+    background-color: #cec;
+}
+
+/* Design-time helpers */
+.titlebar {
+    position: absolute;
+    left: 0px;
+    right: 2px;
+    height: 1.5em;
+    background-color: #7a7;
+    color: #fff;
+    font-weight: bold;
+    padding-left: 1ex;
+    text-align: center;
+    border-radius: 4px 4px 0px 0px;
+}
+
+#dlg-canvas {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    bottom: 30px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-image: url(../img/10x10-canvas-bg.gif);
+    overflow: auto;
+    z-index: 0;
+}
+
+[draggable] {
+    cursor: move;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+}
+
+.widget {
+    background-color: #ccc;
+}
+
+.selected {
+    border: 2px solid #00f;
+    border-radius: 4px;
+}
+
+.handle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: transparent;
+    opacity: 1;
+    border: 1px dotted #f00;
+}
+
+
+/* Attributes */
+#dlg-panel {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 250px;
+    height: 350px;
+    background-color: #ddd;
+    border: 2px outset #ddd;
+    border-radius: 4px;
+    z-index: 100000;
+}
+
+#ui-widgetId {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 100%;
+    height: 24px;
+}
+
+#ui-panel {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    height: 24px;
+}
+
+#ui-output {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    width: 100%;
+    bottom: 10px;
+    overflow: auto;
+}
+
+.prop-name {
+    display: inline-block;
+    width: 110px;
+    overflow: none;
+    text-align: right;
+}
+
+.prop-name:after {
+    content: ':';
+}
+
+.prop-value {
+    margin-left: 10px;
+    width: 100px;
+    border: 0px solid #000;
+    background-color: #eee;
+    padding: 2px;
+}
+
+.dlg-ok,
+.dlg-cancel {
+    width: 48%;
+    background-color: #ccc;
+}
+.dlg-cancel {
+    background-color: #aaa;
+}

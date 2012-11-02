@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>DND Test</title>
+        <link rel="stylesheet" href="css/app.css" />
+        <script src="js/app.js"></script>
+    </head>
+
+    <body>
+        <div id="dlg-menu">
+            <select id="fileMenu" onchange="app.menu.file()">
+                <option>File</option>
+                <option>New</option>
+                <option>Save</option>
+                <option>Load</option>
+            </select>
+
+            <select id="viewMenu" onchange="app.menu.view()">
+                <option>View</option>
+                <option>Grid</option>
+                <option>Preview</option>
+            </select>
+
+            <select id="toolsMenu" onchange="app.menu.tools()">
+                <option>Tools</option>
+                <option>Debug</option>
+                <option>Verbose</option>
+                <option>Stub</option>
+            </select>
+
+            <select id="helpMenu" onchange="app.menu.help()">
+                <option>Help</option>
+                <option>About</option>
+            </select>
+        </div>
+
+        <div id="dlg-canvas" class="container"></div>
+
+        <div id="dlg-panel" draggable="true">
+            <div class="titlebar">Attributes</div>
+            <select id="ui-widgetId"></select>
+            <select id="ui-panel"></select>
+            <div id="ui-output"></div>
+        </div>
+
+        <div id="dlg-palette" draggable="true">
+            <div class="titlebar">Tools</div>
+            <div class="palette"></div>
+        </div>
+
+        <div id="dlg-status"></div>
+    </body>
+</html>
